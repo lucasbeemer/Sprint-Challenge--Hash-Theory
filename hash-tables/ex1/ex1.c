@@ -11,15 +11,16 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
   if(length < 2) {
     return NULL;
   }
-
+// Store each weight as Key into Hash Table, passing Index as a Value
   for(int i = 0; i < length; i++) {
     hash_table_insert(ht, weights[i], i);
   }
 
+// Search for limit-weight in the Storage
   for(int y = 0; y < length; y++) {
     int matching = hash_table_retrieve(ht, limit - weights[y]);
-    if(matching != -1) {
-      if(y > matching) {
+    if(matching != -1) { // if we find a match in the index, store value and return
+      if(y > matching) { // highest index first (index_1)
         ret->index_1 = y;
         ret->index_2 = matching;
       } else {
