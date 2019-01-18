@@ -10,8 +10,8 @@ A     B     result
 -------------------
 0     0       0
 0     1       0
-1     0       0
-1     1       1
+1     0       1
+1     1       0
 ```
 
 2. `(¬A ∨ B) ∧ ¬(A ∧ ¬B)`   (alternate: `(!A || B) && !(A && !B)`)
@@ -20,8 +20,8 @@ A     B     result
 -------------------
 0     0       0
 0     1       1
-1     0       1
-1     1       1
+1     0       0
+1     1       0
 ```
 
 3. `¬(A ∧ B) ∨ ( (A ∧ C) ∧ ¬(B ∨ ¬C) )`   (alternate: `!(A && B) || ( (A && C) && !(B || !C) )`)
@@ -64,14 +64,14 @@ How can you represent the SUM and CARRY of adding THREE digits with a truth tabl
 ```
 A     B     C      carry   sum
 --------------------------------
-0     0     0        ?      ?
-0     0     1        ?      ?
-0     1     0        ?      ?
-0     1     1        ?      ?
-1     0     0        ?      ?
-1     0     1        ?      ?
-1     1     0        ?      ?
-1     1     1        ?      ?
+0     0     0        0      0
+0     0     1        0      1
+0     1     0        0      1
+0     1     1        1      0
+1     0     0        0      1
+1     0     1        1      0
+1     1     0        1      0
+1     1     1        1      1
 ```
-* SUM = ?
-* CARRY = ?
+* SUM = A xor B xor C
+* CARRY = A && B || C
