@@ -6,6 +6,9 @@ Fill out truth tables for the following expressions:
 
 1. `(A ∧ ¬B)`   (alternate: `(A && !B)`)
 ```
+A, and not B
+(True, False)
+
 A     B     result
 -------------------
 0     0       0
@@ -16,6 +19,9 @@ A     B     result
 
 2. `(¬A ∨ B) ∧ ¬(A ∧ ¬B)`   (alternate: `(!A || B) && !(A && !B)`)
 ```
+not A or B... not A and not not B
+(False, True)
+
 A     B     result
 -------------------
 0     0       0
@@ -27,6 +33,8 @@ A     B     result
 3. `¬(A ∧ B) ∨ ( (A ∧ C) ∧ ¬(B ∨ ¬C) )`   (alternate: `!(A && B) || ( (A && C) && !(B || !C) )`)
   * (Hint: Is it possible to calculate this using code?)
 ```
+not A, not B... or A, C... not B, or not not C
+
 A     B     C     result
 -------------------------
 0     0     0       1
