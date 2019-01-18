@@ -90,3 +90,12 @@ Students can receive up to 100 points for their work over the entire week: Array
   * __3__: 90+
   * __2__: 70-89
   * __1__: 0-69
+
+
+
+A computer is something that takes in input, stores information, processes it with logic and functions and whatever is programmed in it, and then gives the output results. All computers do these 4 things.
+
+An array is a data structure, specifically its a list or a set of data.
+It occupies a continuous block of memory and it contains the same type of data, defined by a variable
+
+A hash table is made up of two parts. One part is the array, which is the actual table where the data is stored. And the other part is called the hash function, which provides a way for assigning numbers to the input data. This is so that it can be stored at the arrays index corresponding to the assigned number. They are basically just like arrays except that they are indexed by hashed key values.
